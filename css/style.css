@@ -1,0 +1,1060 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+:root {
+    --primary-light-color: #F5E9E6;
+    --primary-dark-color: #F5DDD9;
+    --secondary-color: #f75639;
+    --text-color: #000;
+    --peragraf-color: #717070;
+}
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* genral css */
+h2.title {
+    position: relative;
+    font-family: 'Orelega One', serif;
+    font-weight: 500;
+}
+
+h2.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-48%, -35%);
+    width: 50px;
+    height: 50px;
+    background-color: #F6C5BC;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.btn {
+    position: relative;
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 0;
+    background: transparent;
+    z-index: 1;
+}
+
+.btn:hover {
+    border: 2px solid var(--secondary-color);
+    color: #fff;
+    background-color: transparent;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    border: 2px solid var(--secondary-color);
+    left: 0;
+    width: 100%;
+}
+
+.paragraf {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    color: var(--peragraf-color);
+    max-width: 688px;
+}
+
+/* navbar css */
+.navbar .navbar-brand {
+    max-width: 150px;
+}
+
+.navbar .navbar-nav li a {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.navbar .navbar-nav li a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar .navbar-nav li a.active {
+    position: relative;
+    color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.navbar .navbar-nav li a.active::before,
+.navbar .navbar-nav li a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.navbar .navbar-nav li a.active::after,
+.navbar .navbar-nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 100%;
+    height: 3px;
+    margin-left: auto;
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.navbar .navbar-nav li a::after {
+    width: 0%;
+}
+
+.navbar .navbar-nav li a:hover::after {
+    width: 100%;
+}
+
+/* hero_section */
+.hero_section {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/Group\ 68.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 100px 0;
+    height: 100%;
+}
+
+.hero_section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Rectangle\ 48.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero_section .hand_img {
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    transform: translate(-30%, -50%);
+    z-index: 99;
+}
+
+.hero_section .hero_left h1 {
+    color: var(--text-color);
+    font-family: Orelega One;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 1.8px;
+}
+
+.hero_section .hero_left p {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 22px;
+    font-style: normal;
+    line-height: 42px;
+    letter-spacing: 0.44px;
+}
+
+.hero_section .hero_left h1 span {
+    color: var(--secondary-color);
+}
+
+.hero_section .hero_right .mobile_img {
+    position: relative;
+    border-radius: 40px;
+    max-width: 250px;
+    z-index: 1;
+    overflow-y: hidden;
+    background-color: #fff;
+}
+
+.hero_section .hero_right .mobile_img .screen_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    opacity: 0;
+    transition: all 1.5s linear;
+    overflow-y: auto;
+}
+
+/* banner section */
+.banner_section {
+    margin-top: -50px;
+    position: relative;
+}
+
+.banner_section .banner_img {
+    background-color: #fff;
+    box-shadow: 0 0 5px #000;
+}
+
+.banner_section .banner_img img {
+    height: 50px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* features section css */
+.features_section .feature_box .card {
+    position: relative;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.30);
+    max-width: 350px;
+    width: 100%;
+}
+
+.features_section .feature_box .card .card_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: -40px;
+    background-color: var(--secondary-color);
+    filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.20));
+}
+
+.features_section .feature_box .card .card-body .card-title {
+    border-color: var(--secondary-color) !important;
+    letter-spacing: 0.66px;
+}
+
+.features_section .feature_box .card .card-body .body_img {
+    max-width: 210px;
+    min-height: 210px;
+}
+
+.features_section .feature_box .card .card-body .body_img img {
+    width: 100%;
+}
+
+.about_promaxcard .abot_bg {
+    background-color: var(--primary-dark-color);
+}
+
+.about_promaxcard .abot_bg .about_left h2 {
+    color: #FFFFFF00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: var(--peragraf-color);
+    stroke: var(--peragraf-color);
+}
+
+.about_promaxcard .about_right {
+    max-width: 400px;
+}
+
+/* product section */
+.product_section .card {
+    margin: 100px 0 50px 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.product_section .card img {
+    margin-top: -80px;
+}
+
+/* faq section */
+
+.faq_section .accordion-container .accordion-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq_section .accordion-container .accordion-item .accordion-header {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.faq_section .accordion-container .accordion-item .accordion-header:hover {
+    background-color: #bd3a23;
+}
+
+.faq_section .accordion-container .accordion-item .accordion-content {
+    background-color: #FAFAFA;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.faq_section .accordion-container .accordion-item .accordion-content p {
+    line-height: 1.5;
+}
+
+.faq_section .accordion-container .accordion-item span.icon {
+    transition: transform 0.3s ease;
+}
+
+.faq_section .accordion-container .accordion-item span.icon i {
+    border-radius: 50px;
+    border: 2px solid;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.active .icon {
+    transform: rotate(90deg);
+}
+
+/* why section */
+.why_section .why_bg {
+    background-color: var(--primary-dark-color);
+}
+
+.why_section .why_bg .why_left>p {
+    color: var(--text-color);
+    line-height: 40px;
+}
+
+/* quote_section */
+.quote_section .Promax_btn {
+    margin-top: 100px;
+}
+
+.quote_section .Promax_btn button {
+    color: var(--text-color);
+    font-size: 25px;
+    letter-spacing: 0.75px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    background-color: #F0F0F0;
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body h2.modal-title {
+    position: relative;
+    color: var(--text-color);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    z-index: 1;
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body h2.modal-title::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(247, 86, 57, 0.30);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body .input_box input {
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-color);
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body .input_box input::placeholder {
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body .input_box input::-webkit-inner-spin-button,
+.quote_section .modal .modal-dialog .modal-content .modal-body .input_box input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quote_section .modal .modal-dialog .modal-content .modal-body .input_box span {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+
+/* ------ about page css -------- */
+.about_section {
+    padding: 100px 0 0px 0;
+    background-image: url(../img/about_banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.about_section .about_left h1 {
+    font-size: 5rem;
+    color: var(--text-color);
+    font-family: 'Orelega One', serif;
+}
+
+.about_section .about_left p {
+    font-size: 20px;
+    line-height: 35px;
+    color: var(--peragraf-color);
+}
+
+.about_section .about_right {
+    max-width: 900px;
+    width: 100%;
+}
+
+.owner_section .owner_left .owner_img {
+    box-shadow: 0 0 5px #0000008c;
+}
+
+.owner_section .owner_left .owner_box {
+    background-color: var(--secondary-color);
+    max-width: 330px;
+    width: 100%;
+    margin-top: -50px;
+}
+.owner_section .owner_left .owner_box h3,
+.owner_section .owner_left .owner_box p{
+    font-family: 'Orelega One', serif;
+    font-weight: normal !important;
+}
+
+.owner_section .owner_right h2 {
+    font-family: 'Orelega One', serif;
+    font-size: 50px;
+}
+
+.owner_section .owner_right p {
+    line-height: 40px;
+}
+
+.mv_section .mv_left {
+    margin: 80px 0 50px 0;
+}
+
+.mv_section .mv_left .card {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--primary-dark-color);
+}
+
+.mv_section .mv_left .card .mv_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    background-color: var(--secondary-color);
+}
+
+.mv_section .mv_left .card .card-body p {
+    color: var(--peragraf-color);
+    line-height: 35px;
+}
+
+
+/* ------- client page css ------- */
+.client_section,
+.our_team {
+    position: relative;
+    height: 80vh;
+    background-image: url(../img/top-view-businessmen-shaking-hands-during-business-negotiation-startup-office.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.client_section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000079;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.client_section .promax_title h2.title,
+.our_team .promax_title h2.title {
+    font-size: 80px;
+    text-shadow: 0 5px 8px #000;
+    z-index: 1;
+}
+
+.client_section .promax_title h2.title::before,
+.our_team .promax_title h2.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-48%, -35%);
+    width: 80px;
+    height: 80px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.client_banner .client_box {
+    background-color: var(--primary-dark-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    max-width: 350px;
+}
+
+.client_banner .client_box .client_img {
+    width: 250px;
+    margin-top: -50px;
+    box-shadow: 0 0 8px #000;
+}
+
+.client_banner .client_box .client_img img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* --------- our team page css -------- */
+.our_team {
+    background-image: url(../img/wepik-export-20231226060433CImB.webp);
+    background-position: top center;
+}
+
+.team_member .team_box {
+    background-color: var(--primary-light-color);
+    box-shadow: 0 0 2px #000;
+    transition: 0.5s all ease-in-out;
+}
+
+.team_member .team_box img {
+    transition: all 0.5s ease;
+}
+
+.team_member .team_box:hover img {
+    scale: 1.2;
+}
+
+.team_member .team_box:hover {
+    background-color: var(--primary-dark-color);
+}
+
+/* -------franchises page css -------- */
+.promax_franchises {
+    background-color: var(--primary-dark-color);
+    padding: 100px 0;
+}
+
+.promax_franchises .f_contant {
+    position: relative;
+    z-index: 1;
+}
+
+.promax_franchises .f_contant .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.promax_franchises .f_contant>span#mytextimg {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    z-index: -2;
+    scale: 0;
+    transition: all 0.5s linear;
+    background-color: var(--primary-light-color);
+}
+
+.promax_franchises .f_contant h2 {
+    position: relative;
+    font-size: 60px;
+    line-height: 75px;
+    mix-blend-mode: color-burn;
+}
+
+.promax_franchises .f_contant h2 span {
+    color: var(--secondary-color);
+}
+
+.investment_section {
+    padding: 100px 0;
+}
+
+.investment_section .ri_box .card {
+    position: relative;
+    box-shadow: 0 0 5px var(--text-color);
+    z-index: 1;
+}
+
+.investment_section .ri_box .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 10px 0 50px;
+    background-color: var(--primary-dark-color);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.investment_section .ri_box .card:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.investment_section .ri_box .card .card-body h5 {
+    border-color: var(--secondary-color) !important;
+    transition: all 0.5s ease;
+}
+
+.investment_section .ri_box .card:hover .card-body h5 {
+    color: blueviolet;
+}
+
+.investment_section .ri_box .card .card-body p {
+    color: var(--peragraf-color);
+    line-height: 35px;
+}
+
+.investment_section .ri_box .card .card_img {
+    max-width: 100px;
+    min-height: 100px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin-bottom: -50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.investment_section .ri_box .card .card_img img {
+    width: 100px;
+    height: 50px;
+}
+
+.investment_section .ri_box .card:hover .card_img {
+    background-color: var(--text-color);
+}
+
+.investment_section .ri_box .card:hover .card_img img {
+    filter: invert(1);
+}
+
+
+/* -------- contact page css ------- */
+.contact_section {
+    padding: 100px 0;
+}
+
+.contact_section .contact_left form .input_group label {
+    letter-spacing: 1px;
+    font-family: 'Orelega One', serif;
+}
+
+.contact_section .contact_left form .input_group input {
+    outline: none;
+}
+
+.contact_section .contact_left form .input_group span {
+    border-bottom: 2px solid #71707056;
+    padding-right: 2px;
+}
+
+
+
+/* footer */
+.footer_section {
+    border-color: var(--secondary-color) !important;
+}
+
+.footer_section .footer_left .logo_img {
+    max-width: 200px;
+}
+
+.footer_section .footer_title h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Orelega One;
+}
+
+.footer_section .footer_title h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.footer_section .footer_middle ul.link li a {
+    position: relative;
+    font-size: 18px;
+    color: var(--peragraf-color);
+    font-weight: normal;
+}
+
+.footer_section .footer_middle ul.link li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.footer_section .footer_middle ul.link li a:hover::after {
+    width: 100%;
+}
+
+.footer_section ul.link li,
+.footer_section .footer_right ul.address li {
+    list-style: none;
+    padding: 4px 0;
+}
+
+.footer_section .footer_right ul.address li a>span.icon {
+    color: var(--text-color);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer_section .footer_right ul.address li a {
+    color: var(--peragraf-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer_section .footer_right ul.address li a:hover {
+    color: var(--secondary-color);
+}
+
+.footer_section .footer_right ul.address li a:hover span.icon {
+    color: rgb(144, 26, 223);
+}
+
+.footer_section .footer_right .social_media a span {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid var(--text-color);
+    border-radius: 100px;
+    transition: all 0.5s;
+}
+
+.footer_section .footer_right .social_media a span i {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.footer_section .footer_right .social_media a span:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer_section .hr {
+    color: var(--secondary-color);
+    border-width: 2px;
+}
+
+.footer_section .copt_right p span,
+.footer_section .copt_right p a {
+    color: var(--secondary-color);
+}
+
+@media (max-width:1024px) {
+    .hero_section .hero_left h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .hero_section .hero_left p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .hero_section .hand_img img {
+        width: 550px;
+    }
+
+    .hero_section .hero_right .mobile_img {
+        max-width: 200px;
+    }
+
+    .features_section .feature_box .card .card-body h5 {
+        font-size: 14px !important;
+    }
+
+    .about_promaxcard .abot_bg .about_left h2 {
+        font-size: 3.3rem;
+        text-align: center;
+    }
+
+    .product_section .card img {
+        margin-top: -50px;
+    }
+
+    .product_section .card .card-body h5 {
+        font-size: 18px !important;
+    }
+
+    .product_section .card {
+        margin: 60px 0 50px 0;
+    }
+
+    .why_section .why_bg .why_left>p {
+        font-size: 18px !important;
+        line-height: 28px;
+    }
+
+    /* about page css */
+    .about_section .about_left h1 {
+        font-size: 3.6rem;
+    }
+
+    .about_section .about_left p {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .owner_section .owner_right h2 {
+        font-size: 24px;
+    }
+
+    .owner_section .owner_right p {
+        line-height: normal;
+    }
+
+    .owner_section .owner_left .owner_box {
+        max-width: 270px;
+    }
+
+    /* ------client page css-------- */
+    .our_team,
+    .client_section {
+        height: 50vh;
+    }
+
+    .client_section .promax_title h2.title,
+    .our_team .promax_title h2.title {
+        font-size: 50px;
+    }
+
+    .client_section .promax_title h2.title::before,
+    .our_team .promax_title h2.title::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    .client_banner .client_box .client_img {
+        width: 140px;
+        padding: 15px !important;
+        margin-top: -40px;
+    }
+
+    .client_banner .client_box .client_img img {
+        width: 100%;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .client_banner .client_box h3 {
+        font-size: 18px !important;
+    }
+
+    /* --------- franchises page css ---------- */
+    .promax_franchises,
+    .investment_section {
+        padding: 50px 0;
+    }
+
+    .promax_franchises .f_contant h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .promax_franchises .f_contant .overlay {
+        display: none;
+    }
+
+    /* ----- contact page css------ */
+    .contact_section {
+        padding: 50px 0;
+    }
+
+    .contact_section .contact_left form .input_group label {
+        font-size: 16px !important;
+        letter-spacing: normal;
+    }
+
+    .footer_section .footer_left .logo_img {
+        max-width: 150px;
+    }
+
+    .footer_section .footer_title h2 {
+        font-size: 24px !important;
+    }
+
+    /* footer section */
+    .footer_section .footer_left .logo_img {
+        max-width: 150px;
+    }
+
+    .footer_section .footer_title h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:767px) {
+    h2.title {
+        font-size: 22px !important;
+    }
+
+    h2.title::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero_section .hand_img {
+        top: 40%;
+        transform: translate(-20%, -50%);
+    }
+
+    .hero_section .hero_left h1 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        padding-top: 30px;
+    }
+
+    .hero_section .hero_right .mobile_img {
+        max-width: 240px;
+    }
+
+    .about_promaxcard .abot_bg .about_left h2 {
+        font-size: 2.3rem;
+    }
+
+    .product_section .card img {
+        margin-top: -80px;
+    }
+
+    .product_section .card .card-body h5 {
+        font-size: 22px !important;
+    }
+
+    .faq_section .accordion-container .accordion-item .accordion-header {
+        font-size: 16px !important;
+    }
+
+    .faq_section .accordion-container .accordion-item .accordion-content p {
+        font-size: 14px !important;
+    }
+
+    .why_section .why_bg .why_left .sub_points>p {
+        font-size: 16px !important;
+    }
+
+    .quote_section .Promax_btn {
+        margin-top: 50px;
+    }
+
+    .quote_section .Promax_btn button {
+        font-size: 16px;
+    }
+
+    /* modal css */
+    .quote_section .modal .modal-dialog .modal-content .modal-body h2.modal-title {
+        font-size: 20px;
+        z-index: 1;
+    }
+
+    .quote_section .modal .modal-dialog .modal-content .modal-body .input_box label {
+        font-size: 16px !important;
+    }
+
+    .quote_section .modal .modal-dialog .modal-content .modal-body .input_box input {
+        width: 50%;
+    }
+
+    /* ------ about page css ---- */
+    .about_section {
+        padding: 50px 0;
+    }
+
+    .about_section .about_left h1 {
+        font-size: 2.3rem;
+        padding-top: 20px;
+    }
+
+    /* ------client page css------- */
+    /* team page css */
+    .our_team .promax_title h2.title,
+    .client_section .promax_title h2.title {
+        font-size: 30px !important;
+    }
+
+    .our_team .promax_title h2.title::before,
+    .client_section .promax_title h2.title::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .client_banner .client_box {
+        max-width: 100%;
+        padding: 0 30px 0 30px;
+    }
+
+    .client_banner .client_box .client_img {
+        width: 100%;
+    }
+
+    .client_banner .client_box .client_img img {
+        height: 80px;
+    }
+}
