@@ -6,7 +6,7 @@ The project focuses on creating a smooth and engaging user experience with respo
 
 🚀 Live Preview
 
-🔗 Live Demo: Add your live website URL here
+🔗 Live Demo: https://apbaraiya.github.io/Promax_Desing/
 
 <img width="1920" height="912" alt="image" src="https://github.com/user-attachments/assets/e2dbe598-378e-4071-9bc4-bd873f323424" />
 
